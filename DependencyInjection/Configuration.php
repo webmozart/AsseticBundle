@@ -244,6 +244,7 @@ class Configuration implements ConfigurationInterface
                                 ->end()
                             ->end()
                         ->end()
+                        ->booleanNode('lazy_assets')->defaultFalse()->end()
                     ->end()
                 ->end()
             ->end()

@@ -108,6 +108,9 @@ class AsseticExtension extends Extension
         // twig functions
         $container->setParameter('assetic.twig_extension.functions', $config['twig']['functions']);
 
+        // lazy assets
+        $container->setParameter('assetic.twig_extension.lazy_assets', $config['twig']['lazy_assets']);
+
         // choose dynamic or static
         if ($useController = $container->getParameterBag()->resolveValue($container->getParameterBag()->get('assetic.use_controller'))) {
             $loader->load('controller.xml');

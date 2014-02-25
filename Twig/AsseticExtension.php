@@ -27,9 +27,9 @@ class AsseticExtension extends BaseAsseticExtension
     private $templateNameParser;
     private $enabledBundles;
 
-    public function __construct(AssetFactory $factory, TemplateNameParserInterface $templateNameParser, $useController = false, $functions = array(), $enabledBundles = array(), ValueSupplierInterface $valueSupplier = null)
+    public function __construct(AssetFactory $factory, TemplateNameParserInterface $templateNameParser, $useController = false, $functions = array(), $enabledBundles = array(), ValueSupplierInterface $valueSupplier = null, $lazyAssets = false)
     {
-        parent::__construct($factory, $functions, $valueSupplier);
+        parent::__construct($factory, $functions, $valueSupplier, $lazyAssets);
 
         $this->useController = $useController;
         $this->templateNameParser = $templateNameParser;
