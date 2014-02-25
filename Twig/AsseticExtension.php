@@ -60,7 +60,7 @@ class AsseticExtension extends BaseAsseticExtension
         return $globals;
     }
 
-    private function createTokenParser($tag, $output, $single = false)
+    protected function createTokenParser($tag, $output, $single = false)
     {
         $tokenParser = new AsseticTokenParser($this->factory, $tag, $output, $single, array('package'));
         $tokenParser->setTemplateNameParser($this->templateNameParser);
